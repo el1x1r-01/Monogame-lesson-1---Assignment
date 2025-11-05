@@ -17,6 +17,8 @@ namespace Monogame_lesson_1___Assignment
 
         Random generator = new Random();
 
+        int background;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -44,8 +46,22 @@ namespace Monogame_lesson_1___Assignment
 
             // TODO: use this.Content to load your game content here
 
-            backgroundTexture = Content.Load<Texture2D>("MoutwashingBackground");
-            curlyTexture = Content.Load<Texture2D>("PainkillersTransparent (3)");
+            background = generator.Next(1, 4);
+
+            if (background == 1)
+            {
+                backgroundTexture = Content.Load<Texture2D>("MoutwashingBackground");
+            }
+            else if (background == 2)
+            {
+                backgroundTexture = Content.Load<Texture2D>("Cockpit");
+            }
+            else if (background == 3)
+            {
+                backgroundTexture = Content.Load<Texture2D>("Creepy ass hallway");
+            }
+
+                curlyTexture = Content.Load<Texture2D>("PainkillersTransparent (3)");
             jimmyTexture = Content.Load<Texture2D>("Jimbabwe (1)");
             mouthwashTexture = Content.Load<Texture2D>("DragonbreathMouthwash (1)");
             eyeTexture = Content.Load<Texture2D>("MouthwashingEye (1)");
