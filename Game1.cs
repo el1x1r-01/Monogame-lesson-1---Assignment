@@ -91,9 +91,15 @@ namespace Monogame_lesson_1___Assignment
             _spriteBatch.Draw(jimmyTexture, new Vector2(1025, 200), Color.White);
             _spriteBatch.Draw(mouthwashTexture, new Vector2(500, 75), Color.White);
 
+            for (int i = 0; i <= 30; i++)
+            {
+                _spriteBatch.Draw(eyeTexture, new Vector2((i * 46), 0), Color.White);
+                _spriteBatch.Draw(eyeTexture, new Vector2((i * 46), 750), Color.White);
+            }
+
             for (int i = 0; i <= 250; i++)
             {
-                _spriteBatch.Draw(eyeTexture, new Vector2(generator.Next(-100, 1500), generator.Next(-100, 800)), Color.White);
+                //_spriteBatch.Draw(eyeTexture, new Vector2(generator.Next(-100, 1500), generator.Next(-100, 800)), Color.White);
             }
 
             _spriteBatch.End();
